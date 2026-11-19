@@ -1,0 +1,29 @@
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Go
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+
+# Logs
+*.log
+
+# OS & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
