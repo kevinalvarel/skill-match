@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import "./index.css";
 import HomePage from "@/pages/(applicant)/home";
 import LowonganPage from "./pages/(applicant)/lowongan";
-import ApplicantLayout from "./pages/(applicant)/_components/ApplicantLayout";
+import ApplicantLayout from "./pages/(applicant)/layouts/ApplicantLayout";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

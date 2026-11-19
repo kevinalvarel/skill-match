@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <>
       <nav className="w-full mx-auto py-4 border-b-2">
-        <div className="max-w-7xl mx-auto flex justify-between gap-4 items-center">
+        <div className="max-w-7xl mx-auto flex justify-between gap-4 items-center px-6">
           <Link className="font-semibold flex flex-col text-lg" to={"/"}>
             SkillMatch
             <span className="text-xs uppercase text-neutral-500">
