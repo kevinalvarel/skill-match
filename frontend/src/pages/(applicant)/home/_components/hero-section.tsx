@@ -26,8 +26,8 @@ interface HeroSectionProps {
 export function HeroSection({ techLogos, popularBadges }: HeroSectionProps) {
   return (
     <>
-      <section id="hero" className="h-screen bg-blue-50/90">
-        <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 py-3 md:py-12">
+      <section id="hero" className="h-screen bg-blue-50 rounded-b-4xl">
+        <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 md:grid-cols-4 gap-4 py-3 md:py-6">
           <main className="col-span-3 w-[80%] py-12">
             <div className="flex flex-col space-y-8 break-normal">
               <Badge className="p-3 bg-blue-500 flex flex-row items-center gap-2.5">
@@ -85,7 +85,7 @@ export function HeroSection({ techLogos, popularBadges }: HeroSectionProps) {
               <img
                 src="images/hero-landing.jpg"
                 alt="Hero Image"
-                className="aspect-square h-auto w-auto rounded-xl object-cover ring-2 ring-white shadow-sm"
+                className="w-full max-w-md h-auto rounded-xl object-cover ring-2 ring-white shadow-sm"
               />
             </div>
           </aside>

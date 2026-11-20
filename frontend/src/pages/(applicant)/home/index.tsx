@@ -5,6 +5,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { HeroSection } from "./_components/hero-section";
+import { RecommendationSection } from "./_components/recommendation-section";
 
 const popularBadges = ["Data Science", "Data Engineer", "Software Engineer"];
 const techLogos = [
@@ -34,6 +35,7 @@ export default function HomePage() {
     <>
       <div className="w-full mx-auto">
         <HeroSection techLogos={techLogos} popularBadges={popularBadges} />
+        <RecommendationSection />
       </div>
     </>
   );

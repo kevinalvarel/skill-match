@@ -1,3 +1,3 @@
-module backend-hr-recruitment
+module skill-match
 
 go 1.27.4
