@@ -1,0 +1,92 @@
+[
+  {
+    "jobTitle": "Software Engineer",
+    "company": "PT Astra Graphia Information Technology",
+    "location": "Jakarta",
+    "jobType": "Hybrid",
+    "sallary": "Rp 18.000.000",
+    "facilities": ["Macbook M3", "BPJS"],
+    "skills": ["React", "Typescript", "Tailwindcss"]
+  },
+  {
+    "jobTitle": "Frontend Developer",
+    "company": "PT Tokopedia",
+    "location": "Jakarta",
+    "jobType": "Hybrid",
+    "sallary": "Rp 12.000.000",
+    "facilities": ["Macbook Pro", "BPJS", "Flexible Working Hours"],
+    "skills": ["React", "Next.js", "Typescript", "Tailwindcss"]
+  },
+  {
+    "jobTitle": "Backend Developer",
+    "company": "PT GoTo Gojek Tokopedia",
+    "location": "Jakarta",
+    "jobType": "Hybrid",
+    "sallary": "Rp 15.000.000",
+    "facilities": ["Laptop", "BPJS", "Health Insurance"],
+    "skills": ["Golang", "PostgreSQL", "Redis", "Docker"]
+  },
+  {
+    "jobTitle": "Full Stack Developer",
+    "company": "PT Ruangguru",
+    "location": "Jakarta",
+    "jobType": "On-site",
+    "sallary": "Rp 13.000.000",
+    "facilities": ["Laptop", "BPJS", "Meal Allowance"],
+    "skills": ["React", "Node.js", "Express.js", "MongoDB"]
+  },
+  {
+    "jobTitle": "Machine Learning Engineer",
+    "company": "PT Telkom Indonesia",
+    "location": "Bandung",
+    "jobType": "Hybrid",
+    "sallary": "Rp 16.000.000",
+    "facilities": ["Laptop", "BPJS", "Training Budget"],
+    "skills": ["Python", "TensorFlow", "PyTorch", "Scikit-learn"]
+  },
+  {
+    "jobTitle": "UI/UX Designer",
+    "company": "PT Traveloka",
+    "location": "Jakarta",
+    "jobType": "Hybrid",
+    "sallary": "Rp 11.000.000",
+    "facilities": ["Macbook", "BPJS", "Flexible Working Hours"],
+    "skills": ["Figma", "UI Design", "UX Research", "Prototyping"]
+  },
+  {
+    "jobTitle": "DevOps Engineer",
+    "company": "PT Blibli.com",
+    "location": "Jakarta",
+    "jobType": "On-site",
+    "sallary": "Rp 17.000.000",
+    "facilities": ["Laptop", "BPJS", "Health Insurance"],
+    "skills": ["Docker", "Kubernetes", "AWS", "CI/CD", "Linux"]
+  },
+  {
+    "jobTitle": "Mobile Developer",
+    "company": "PT Bank Jago Tbk",
+    "location": "Jakarta",
+    "jobType": "Hybrid",
+    "sallary": "Rp 14.000.000",
+    "facilities": ["Macbook", "BPJS", "Annual Bonus"],
+    "skills": ["Flutter", "Dart", "Firebase", "REST API"]
+  },
+  {
+    "jobTitle": "Data Scientist",
+    "company": "PT GoTo Gojek Tokopedia",
+    "location": "Jakarta",
+    "jobType": "Hybrid",
+    "sallary": "Rp 15.000.000",
+    "facilities": ["Laptop", "BPJS", "Health Insurance"],
+    "skills": ["Python", "SQL", "Pandas", "Machine Learning"]
+  },
+  {
+    "jobTitle": "Junior Frontend Developer",
+    "company": "PT Dicoding Akademi Indonesia",
+    "location": "Bandung",
+    "jobType": "Remote",
+    "sallary": "Rp 7.000.000",
+    "facilities": ["Laptop", "BPJS", "Learning Budget"],
+    "skills": ["HTML", "CSS", "JavaScript", "React"]
+  }
+]
