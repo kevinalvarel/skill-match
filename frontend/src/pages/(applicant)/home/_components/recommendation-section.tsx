@@ -21,7 +21,7 @@ import jobs from "@/mock/lowongan.json";
 
 export const RecommendationSection = () => {
   return (
-    <section className="h-screen">
+    <section className="w-full">
       <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 gap-4 py-6 md:py-16 w-full">
         <header className="flex flex-col space-y-3 w-full">
           <div className="flex flex-row items-center gap-3 text-blue-900 font-semibold">

@@ -6,6 +6,7 @@ import {
 } from "react-icons/si";
 import { HeroSection } from "./_components/hero-section";
 import { CategoriesSection } from "./_components/categories-section";
+import { CompaniesSection } from "./_components/companies-section";
 import { RecommendationSection } from "./_components/recommendation-section";
 
 const popularBadges = ["Data Science", "Data Engineer", "Software Engineer"];
@@ -36,8 +37,9 @@ export default function HomePage() {
     <>
       <div className="w-full mx-auto">
         <HeroSection techLogos={techLogos} popularBadges={popularBadges} />
-        <CategoriesSection />
         <RecommendationSection />
+        <CategoriesSection />
+        <CompaniesSection />
       </div>
     </>
   );
