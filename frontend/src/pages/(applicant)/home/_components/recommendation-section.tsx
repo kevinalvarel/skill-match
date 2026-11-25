@@ -1,25 +1,22 @@
 import { Badge } from "@/components/ui/badge";
-import {
-  ArrowRightIcon,
-  Bookmark,
-  Clock,
-  IdCard,
-  SparkleIcon,
-} from "lucide-react";
+import { ArrowRightIcon, IdCard, SparkleIcon } from "lucide-react";
 import { Link } from "react-router";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { JobCard, type JobItem } from "@/components/job-card";
+import { useState } from "react";
 
 import jobs from "@/mock/lowongan.json";
 
 export const RecommendationSection = () => {
+  const [savedKeys, setSavedKeys] = useState<string[]>([]);
+
+  const toggleSave = (job: JobItem) => {
+    const key = `${job.jobTitle}-${job.company}`;
+    setSavedKeys((prev) =>
+      prev.includes(key) ? prev.filter((item) => item !== key) : [...prev, key],
+    );
+  };
+
   return (
     <section className="w-full">
       <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 gap-4 py-6 md:py-16 w-full">
@@ -45,7 +42,7 @@ export const RecommendationSection = () => {
               <Badge
                 variant="outline"
                 className="bg-transparent p-5 border-blue-800 "
-                render={<Link to={"/"} />}
+                render={<Link to={"/lowongan-pekerjaan"} />}
               >
                 Lihat Semua Lowongan Pekerjaan
                 <ArrowRightIcon />
@@ -53,60 +50,17 @@ export const RecommendationSection = () => {
             </div>
           </div>
         </header>
-        <main className="grid grid-cols-3 py-6 mx-auto w-full gap-6">
-          {jobs.slice(0, 3).map((item, index) => {
+        <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-6 mx-auto w-full gap-6">
+          {(jobs as JobItem[]).slice(0, 3).map((item) => {
+            const key = `${item.jobTitle}-${item.company}`;
             return (
-              <>
-                <Card key={index}>
-                  <CardHeader className="flex flex-row gap-3">
-                    <Avatar size="lg" className="rounded-xl size-20">
-                      <AvatarFallback>PT</AvatarFallback>
-                    </Avatar>
-                    <div className="flex flex-col justify-center gap-1.5">
-                      <h3 className="text-base font-bold">{item.jobTitle}</h3>
-                      <p className="text-[12px]">
-                        {item.company} - <span>{item.location}</span>
-                      </p>
-                      <p className="text-[10px] text-green-800 font-semibold">
-                        {item.jobType}
-                      </p>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="flex flex-col gap-4">
-                    <div className="flex flex-col justify-center rounded-lg bg-blue-100/40 p-3 gap-0.5">
-                      <h4 className="text-neutral-600 font-medium text-[11px]">
-                        ESTIMASI GAJI BULANAN
-                      </h4>
-                      <p className="text-blue-800 font-bold">{item.sallary}</p>
-                      <div className="flex flex-row items-center gap-4">
-                        <span className="text-neutral-600 text-[11px] font-medium">
-                          BPJS Asuransi Swasta
-                        </span>
-                      </div>
-                    </div>
-                    <div className="w-full flex flex-row gap-3">
-                      <Badge variant="outline" className="bg-blue-100/40">
-                        React
-                      </Badge>
-                    </div>
-                    <Separator />
-                  </CardContent>
-                  <CardFooter className="flex flex-row justify-between items-center">
-                    <div className="text-neutral-600 text-xs flex items-center gap-1.5">
-                      <Clock className="size-4 text-neutral-600" /> 1 jam yang
-                      lalu
-                    </div>
-                    <div className="flex gap-2 items-center">
-                      <Button variant="outline">
-                        <Bookmark />
-                      </Button>
-                      <Button nativeButton={false} render={<Link to={"/"} />}>
-                        Lamar Cepat
-                      </Button>
-                    </div>
-                  </CardFooter>
-                </Card>
-              </>
+              <JobCard
+                key={key}
+                job={item}
+                isSaved={savedKeys.includes(key)}
+                onToggleSave={toggleSave}
+                applyHref="/lowongan-pekerjaan"
+              />
             );
           })}
         </main>
